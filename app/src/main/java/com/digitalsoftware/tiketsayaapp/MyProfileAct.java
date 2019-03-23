@@ -118,7 +118,7 @@ public class MyProfileAct extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(username_key, "");
                 editor.apply();
-                
+
                 //berpindah activity
                 Intent gotoHome = new Intent(MyProfileAct.this, SignInAct.class);
                 startActivity(gotoHome);
