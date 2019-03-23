@@ -80,8 +80,7 @@ public class RegisterOneAct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //simpan data username ke lokal
-                Intent backToSignIn = new Intent(RegisterOneAct.this, SignInAct.class);
-                startActivity(backToSignIn);
+              onBackPressed();
             }
         });
 

@@ -109,8 +109,7 @@ public class RegisterTwoAct extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backToPrev= new Intent(RegisterTwoAct.this, RegisterOneAct.class);
-                startActivity(backToPrev);
+                onBackPressed();
             }
         });
     }

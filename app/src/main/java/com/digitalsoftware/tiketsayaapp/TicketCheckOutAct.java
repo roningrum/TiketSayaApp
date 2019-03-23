@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +24,7 @@ import java.util.Random;
 public class TicketCheckOutAct extends AppCompatActivity {
     Button btnBuyTicket, btnPles, btnMines;
     TextView txtJumlahTicket, txtmyBalance, txtTotalTicket, namaWisata, lokasi, ketentuan;
+    LinearLayout btnBack;
     ImageView imgNoticeUang;
 
     Integer valueJumlahTicket = 1;
@@ -55,6 +57,8 @@ public class TicketCheckOutAct extends AppCompatActivity {
         btnBuyTicket = findViewById(R.id.btn_buy_ticket);
         btnPles = findViewById(R.id.btn_ples);
         btnMines = findViewById(R.id.btn_mines);
+        btnBack = findViewById(R.id.btn_back);
+
         txtJumlahTicket = findViewById(R.id.txt_jumlah_ticket);
         txtmyBalance = findViewById(R.id.txt_my_balance);
         txtTotalTicket = findViewById(R.id.txt_total_harga);
@@ -170,6 +174,13 @@ public class TicketCheckOutAct extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
